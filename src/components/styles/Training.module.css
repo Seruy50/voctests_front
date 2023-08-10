@@ -1,0 +1,650 @@
+.mainWindow {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    margin: 100px auto;
+    border: 2px solid green;
+    min-height: 600px;
+    border-top-left-radius: 100px;
+   border-bottom-right-radius: 100px;
+   background-color: green;
+}
+
+.mainSetingsWindow {
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    border: 5px solid yellowgreen;
+    min-height: 100%;
+    border-radius: 25px;
+}
+
+
+
+.mainSetingsWindow div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    border-left: 8px double green;
+}
+
+.mainSetingsWindow div button {
+    width: 100px;
+    height: 100px;
+    border: 4px solid green;
+    border-radius: 25px;
+    background-color: #c4ffcd;
+    font: bold 30px/25px times;
+    color: rgb(95, 134, 27);
+}
+
+.mainSetingsWindow div button:hover {
+    border: 4px solid yellowgreen;
+    color: yellowgreen;
+}
+
+.mainSetingsWindow div button:active {
+    border: 4px solid yellowgreen;
+    color: #fff
+}
+
+.settingsBar{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    min-height: 100%;
+    justify-content: space-around;
+    padding: 0 50px 0 50px;
+    gap: 60px;
+    padding: 25px;
+}
+
+.settingsBar label {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.settingsBar label input, .settingsBar label select{
+    width: 120px;
+    height: 35px;
+    font: italic 25px/25px times;
+    text-align: center;
+    outline: none;
+    border: 1px solid green;
+}
+
+.settingsBar label input:focus, .settingsBar label select:focus{
+    border: 1px solid yellowgreen;
+}
+
+.warningsUnderInputs{
+    position: absolute;
+    top: 40px;
+    width: 150px;
+    font: 13px/13px times;
+    color: red;
+    right: -30px;
+}
+
+.inputRightAnswer{
+    color: red;
+}
+
+.generalTestContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 0 10px 0;
+    min-height: 600px;
+}
+
+
+
+.generalTestContainer ol li {
+    position: relative;
+    border: 3px solid yellowgreen;
+    border-radius: 15px;
+    margin: 5px 0 5px 0;
+    background-color: #fff;
+    font: 20px/20px times;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 25px 10px 25px;
+}
+
+.generalTestContainer ol li hr {
+   position: absolute;
+   border: 2px solid yellowgreen;
+   background-color: yellowgreen;
+   left: 40%;
+   top: 0;
+   width: 5px;
+   height: 45px;
+}
+
+.generalTestContainer ol li input{
+    text-align: center;
+    font: bold 25px/15px times;
+    width: 55%;
+    height: 25px;
+    border: 2px solid green;
+}
+
+.generalTestContainer ol li input:hover{
+    border: 2px solid yellowgreen;
+}
+
+.generalTestContainer ol li input:focus{
+    outline: none;
+    border: 2px solid yellowgreen;
+    text-align: left;
+    padding: 0 0 0 15px;
+}
+
+.generalTestContainer button{
+    margin: 20px auto;
+    padding: 0 20px 0 20px;
+    height: 50px;
+    border: 2px solid yellowgreen;
+    background-color: #fff;
+    font: bold 20px/20px times;
+    color: green;
+}
+
+.generalTestContainer button:hover {
+    color: yellowgreen;
+}
+
+.generalTestContainer button:active {
+    color: white;
+}
+
+.mistakesListContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 600px;
+    padding: 50px 0 50px 0;
+}
+
+
+.mistakesListContainer ol{
+    width: 60%;
+}
+
+.mistakesListContainer ol li{
+    position: relative;
+    border: 3px solid yellowgreen;
+    border-radius: 15px;
+    margin: 5px 0 5px 0;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 25px 10px 25px;
+    font: 23px/25px times;
+}
+
+.mistakesListContainer ol li hr {
+    position: absolute;
+    border: 2px solid yellowgreen;
+    background-color: yellowgreen;
+    left: 35%;
+    top: 0;
+    width: 5px;
+    height: 50px;
+ }
+
+ .mistakesListContainer ol li span:first-of-type {
+    width: 30%;
+    text-align: center;
+    overflow: hidden;
+    height: 30px;
+  }
+
+ .mistakesListContainer ol li span:last-of-type {
+   position: absolute;
+   left: 40%;
+   width: 45%;
+   overflow: hidden;
+   height: 30px;
+ }
+
+ .addCreateMainContainer{
+    position: relative;
+    width: 50%;
+ }
+
+ .addCreateBattunsContainer {
+    position: relative;
+    z-index: 2;
+ }
+
+ .addCreateBattunsContainer button {
+    width: 50%;
+    padding: 0 20px 0 20px;
+    height: 40px;
+    border: 2px solid yellowgreen;
+    background-color: #fff;
+    font: bold 20px/20px times;
+    color: green;
+ }
+
+ .addCreateBattunsContainer button:hover {
+    color: yellowgreen;
+}
+
+.addCreateBattunsContainer button:active {
+    color: white;
+}
+
+ .addCreateBlockDown {
+    border: 2px solid yellowgreen;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    top: 0;
+    z-index: -1;
+    animation-name: moveDown;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    background-color: #fff;
+ }
+
+
+ @keyframes moveDown {
+    from {
+        top: 0px;
+    }
+    to {
+       top: 40px;
+       z-index: 1;
+      
+    }
+ }
+
+ .formAddCollection{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+ }
+ .formAddCollection div:first-of-type{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+ }
+
+ .formAddCollection select{
+    display: block;
+    width: 75%;
+    height: 25px;
+    font: 20px/20px times;
+    border: 2px solid green;
+    outline: none;
+    padding: 0 0 0 10px;
+ }
+
+
+ .formAddCollection div:last-of-type{
+    display: flex;
+    flex-direction: row;
+    margin: 0 15px 0 15px;
+    gap:15px;
+    align-items: center;
+    width: 25%;
+    height: 60px;
+ }
+
+ .formAddCollection button{
+   width: 40px;
+   height: 40px;
+ }
+ 
+
+ .formAddCollection button:first-of-type{
+    width: 35px;
+    height: 35px;
+    background: url('../images/accept.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border:none;
+ }
+
+ .formAddCollection button:first-of-type:hover {
+    width: 40px;
+    height: 40px;
+ }
+ 
+ .formAddCollection button:last-of-type{
+   width: 35px;
+   height:35px;
+    background: url('../images/close.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+ }
+
+ .formAddCollection button:last-of-type:hover {
+    width: 40px;
+    height: 40px;
+ }
+
+ .formCreateCollection{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+ }
+ .formCreateCollection div:first-of-type{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 75%;
+ }
+
+ .formCreateCollection select{
+    display: block;
+    width: 20%;
+    height: 25px;
+    font: 20px/20px times;
+    border: 2px solid green;
+    outline: none;
+ }
+
+ .formCreateCollection input{
+    display: block;
+    width: 70%;
+    height: 25px;
+    margin-left: 10px;
+    border: 2px solid green;
+    outline: none;
+    padding: 0 0 0 10px;
+    font: 20px/20px times;
+ }
+
+ .formCreateCollection div:last-of-type{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    margin: 0 15px;
+    width: 25%;
+    height: 60px;
+ }
+
+ .formCreateCollection button{
+   width: 35px;
+   height: 35px;
+ }
+
+ .formCreateCollection button:first-of-type{
+    background: url('../images/accept.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+ }
+
+ .formCreateCollection button:first-of-type:hover {
+    width: 40px;
+    height: 40px;
+ }
+ 
+ .formCreateCollection button:last-of-type{
+    width: 35px;
+    height: 35px;
+    background: url('../images/close.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+ }
+
+ .formCreateCollection button:last-of-type:hover {
+    width: 40px;
+    height: 40px;
+ }
+
+ .addCreateBlockUp {
+    position: absolute;
+    border: 2px solid yellowgreen;
+    width: 100%;
+    height: 60px;
+    top: 40px;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    animation-name: moveUp;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    background-color: #fff;
+ }
+
+ @keyframes moveUp {
+    from {
+        top: 40px;
+    }
+    to {
+       top: 0px;
+       z-index: 1;
+       height: 40px;
+    }
+ }
+
+ .mistakesListContainer__startTraining{
+    padding: 0 20px 0 20px;
+    height: 40px;
+    border: 2px solid yellowgreen;
+    background-color: #fff;
+    font: bold 20px/20px times;
+    color: green;
+ }
+ 
+ .mistakesListContainer__startTraining:hover {
+    color: yellowgreen;
+}
+
+.mistakesListContainer__startTraining:active {
+    color: white;
+}
+
+.Toastify__toast__container {
+   font: 18px/25px times;
+}
+
+.testsMainBlock{
+   position: absolute;
+   top:0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   background-color: green;
+   color: white;
+   border-top-left-radius: 100px;
+   border-bottom-right-radius: 100px;
+}
+
+.stage{
+   position: absolute;
+   top: 50px;
+   text-align: center;
+   font: italic bold 30px/30px arial;
+   opacity: 0.5;
+   color: white;
+}
+
+.wordToTest{
+   font: italic bold 30px/25px Monospace;
+}
+
+.inputForTraining{
+   font: bold 30px/25px Monospace;
+   text-align: center;
+   outline: none;
+   border-radius: 25px;
+}
+
+.counter{
+   color: white;
+   font: bold 35px/40px 'Candara';
+}
+
+.blockWithWords{
+   text-align: center;
+}
+
+.blockWithWords p:first-child{
+   padding: 0 0 50px 0;
+}
+
+.blockWithWords p:last-child{
+   padding: 50px 0 0 0;
+}
+
+.buttonNextStage {
+   padding: 0 20px 0 20px;
+   height: 40px;
+   border: 2px solid white;
+   background-color: #fff;
+   font: bold 20px/20px times;
+   color: green;
+}
+   
+.buttonNextStage:hover {
+   color: yellowgreen;
+}
+  
+.buttonNextStage:active {
+   color: white;
+}
+
+.currentResultsBoard{
+   
+   font:  40px/25px 'Georgia';
+   width: 250px;
+   opacity: 0.8;
+}
+
+.currentResultsBoard div{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   height: 65px;
+   -webkit-text-stroke: 1px grey;
+}
+
+.currentResultsBoard button{
+   width: 100px;
+   margin-left: 75px;
+}
+
+.finalBlockWithResults{
+   width: 700px;
+
+}
+
+.containerForResultsFromStages{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+}
+
+.wellDoneTitle{
+   text-align: center;
+   font: italic 45px/45px times;
+   color: rgb(255, 255, 255);
+   padding: 0 0 50px 0;
+}
+
+.containerForResultsFromStages__stage{
+   width: 33%;
+   display: flex;
+   flex-direction: column;
+   gap: 25px;
+}
+
+.containerForResultsFromStages__stage__title {
+   text-align: center;
+   font: bold italic 35px/35px times;
+}
+
+.containerForResultsFromStages__stage div{
+   padding: 0px 25px;
+   font: 30px/35px times;
+   display: flex;
+   justify-content: space-between;
+}
+
+.lineBetweenBlocks{
+   width: 5px;
+   border: 1px solid white;
+   background-color: green;
+}
+
+.finalResultpar{
+   font: 30px/35px times;
+   padding: 50px 10px 0 10px;
+   text-align: center;
+}
+
+.finalResultColors {
+   font: italic bold 35px/50px times;
+   text-decoration: underline;
+}
+
+.buttonCloseTrainingField{
+   position: absolute;
+   top: 15px;
+   right: 15px;
+   width: 50px;
+   height: 50px;
+   border: 2px solid White;
+   border-radius: 50%;
+}
+
+.buttonCloseTrainingField span{
+   border: 1px solid white;
+   width: 26px;
+   position: absolute;
+   transform: rotate(45deg);
+   left: 11px;
+   top: 22px;
+}
+
+.buttonCloseTrainingField span:nth-child(2){
+   transform: rotate(-45deg);
+}
+
+.buttonCloseTrainingField:hover span{
+   width: 46px;
+   left: -0px;
+   top: 22px;
+}
+
+.buttonCloseTrainingField:active span{
+   display: none;
+}

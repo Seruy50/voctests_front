@@ -1,0 +1,289 @@
+.getWordsMain{
+    margin: 100px auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    width: 50%;
+    border: 5px solid green;
+    align-items: center;
+}
+
+.fieldContainerUpload{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding:  25px 45px 25px 25px;
+    width: 400px;
+    height: 200px;
+    border: 3px solid green;
+    border-radius: 25px;
+} 
+.chooseFileContainer{
+    display: block;
+    border: 2px solid green;
+    width: 150px;
+    height: 150px;
+    background-image: url('E://WEB/vocfull/voc_front/src/components/images/folder.png');
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.chooseFileContainer:hover{
+    background-image: url('E://WEB/vocfull/voc_front/src/components/images/folderFocus.png');
+}
+
+.chooseFileContainer:active{
+    background-image: url('E://WEB/vocfull/voc_front/src/components/images/folderActive.png');
+}
+
+.chooseFile{
+    opacity: 0;
+}
+
+.button {
+    bottom: 25px;
+    width: 100px;
+    height: 50px;
+    border: 1px solid green;
+    background-color: #fff;
+    font: bold 20px/20px times;
+    color: green;
+}
+
+.button:hover{
+    color: yellowgreen;
+}
+
+.button:active {
+    color:#fff
+}
+
+.button:disabled{
+    opacity: 0.5;
+    bottom: 25px;
+    width: 100px;
+    height: 50px;
+    border: 1px solid grey;
+    background-color: #fff;
+    font: bold 20px/20px times;
+    color: grey;
+}
+
+.addCollectionTheme{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.addCollectionTheme div {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.addCollectionTheme p {
+    font: 30px/30px times;
+}
+
+.addCollectionTheme div button {
+    display: block;
+    width: 50px;
+    height: 50px;
+    border: 1px solid green;
+}
+
+.getWordsChooseMethod__container{
+    position: absolute;
+    width: 20%;
+    left: 40%;
+    top: 250px;
+}
+
+.getWordsChooseMethod__container p {    
+    text-align: center;
+    font: bold 45px/45px times;
+    
+    cursor: pointer;
+}
+
+.getWordsChooseMethod__span{
+    color: green;
+}
+
+.getWordsChooseMethod__span:hover{
+    color: rgb(120, 226, 21);
+}
+
+.getWordsChooseMethod__span_active{
+    color: yellowgreen;
+    text-decoration-line: underline;
+}
+
+.wordsFromFieldContainer{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 25px;
+}
+
+.wordsFromFieldContainer p{
+    font: italic 25px/25px times;
+}
+
+.wordsFromFieldContainer textarea{
+    width: 80%;
+    min-height: 200px;
+    resize: none;
+    font: 20px/20px times;
+    outline: none;
+    border: 2px solid green;
+    border-radius: 25px;
+    padding: 15px;
+}
+
+.wordsFromFieldContainer button{
+    padding: 0 20px 0 20px;
+    width: 200px;
+    height: 50px;
+    border: 2px solid green;
+    background-color: #fff;
+    font: bold 20px/20px times;
+    color: green;
+}
+
+.wordsFromFieldContainer button:hover{
+    color:yellowgreen;
+    border: 2px solid yellowgreen;
+}
+
+.wordsFromFieldContainer button:active{
+    color:#fff;    
+}
+
+.wordsFromFieldContainer div{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.wordsFromFieldContainer_input {
+    outline: none;
+    width: 200px;
+    height: 40px;
+    margin: 5px 0 0 0;
+    border: 2px solid green;
+    font: 22px/22px times;
+    padding: 0 0 0 15px;
+}
+
+.wordsFromFieldContainer_input:focus {
+    border: 2px solid yellowgreen;
+}
+
+.wordsFromFieldContainer_input:hover {
+    border: 2px solid rgb(120, 226, 21);
+}
+
+
+
+.fieldContainerDownload{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.fieldContainerDownload button{
+    width: 100%;
+    padding: 0 20px 0 20px;
+    height: 50px;
+    border: 2px solid green;
+    background-color: #fff;
+    font: bold 20px/20px times;
+    color: green;
+}
+
+.fieldContainerDownload button:hover {
+    color: yellowgreen;
+    border-color: yellowgreen;
+}
+
+.fieldContainerDownload button:active {
+    color: #fff;
+}
+
+.fieldContainerDownload button:disabled{
+    color: grey;
+    border: 1px solid grey;
+    opacity: 0.5;
+}
+
+.createCollecction__container {
+    width: 60%;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    border: 2px solid green;
+    border-radius: 25px;
+}
+
+.createCollecction__container input{
+    outline: none;
+    width: 200px;
+    height: 40px;
+    margin: 5px 0 0 0;
+    border: 2px solid green;
+    font: 22px/22px times;
+    padding: 0 0 0 15px;
+}
+
+.addCollectionButtons {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.addCollectionButtons button{
+    width: 100%;
+    padding: 0 20px 0 20px;
+    height: 50px;
+    border: 2px solid green;
+    background-color: #fff;
+    font: bold 20px/20px times;
+    color: green;
+}
+
+.addCollectionButtons button:disabled{
+    border: 1px solid grey;
+    color: grey;
+    opacity: 0.5;
+}
+
+.addCollectionButtons  button:hover {
+    color: yellowgreen;
+    border-color: yellowgreen;
+}
+
+.addCollectionButtons  button:active {
+    color: #fff;
+}
+
+.addCollectionButtons  button:last-of-type:hover {
+    color: red;
+    border-color: red;
+}
+
+.addCollectionButtons  button:last-of-type:active {
+    color: #fff;
+}
+
+

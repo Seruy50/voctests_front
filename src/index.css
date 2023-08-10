@@ -1,3 +1,45 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+/* width */
+::-webkit-scrollbar {
+  
+  width: 10px;
+  border: 1px solid green;
+  background-color: #fff;
+}
+/* button */
+::-webkit-scrollbar-button {
+  border: 1px solid green;
+  background: yellowgreen; 
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: green; 
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: yellowgreen; 
+}
+/* Track */
+::-webkit-scrollbar-track {
+  border: 1px solid green;
+  background: white; 
+}
+/* The track NOT covered by the handle.
+::-webkit-scrollbar-track-piece {
+  background: #000; 
+}
+/* Corner */
+::-webkit-scrollbar-corner {
+  background: #999; 
+}
+/* Resizer */
+::-webkit-resizer {
+  background: #111; 
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

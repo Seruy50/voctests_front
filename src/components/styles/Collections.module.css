@@ -1,0 +1,580 @@
+.mainBlock{
+    position: relative;
+    width: 100%;
+    min-height: 100px;
+    border: 1px solid white;
+}
+
+.collections{
+    margin: 50px auto 0px auto;
+    top: 50px;
+    width: 80%;
+    left: 10%;
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
+    flex-wrap: wrap;
+}
+
+.collectionCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 30%;
+    height: 200px;
+    border: 6px solid green;
+    border-radius: 25px;
+    margin-bottom: 50px;
+    overflow: hidden;
+}
+
+.collectionCardName{
+    text-align: right;
+    font: 40px/45px times;
+    padding: 15px;
+}
+
+.collectionCardButtons {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 15px;
+    background-color: rgba(240, 227, 227, 0.6);
+}
+
+.collectionCardButtons button{
+    background-color: rgba(240, 227, 227, 0);
+    width: 20%;
+    height: 50px;
+    border: none;
+    color: black;
+    font: bold italic 22px/22px times;
+}
+
+.collectionCardButtons button:hover{
+    color: #fff;
+}
+
+.addWindowContainer{
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom: 0;
+    background-color: rgba(240, 227, 227, 0.8);
+    border: 1px solid red;
+}
+
+.addButtonContainer{
+    position: absolute;
+    top:0;
+    bottom:0;
+    right: 25px;
+}
+
+/*Add Button + windows START*/
+
+.buttonAdd {
+    position: sticky;
+    top: 155px;
+    right: 25px;
+    width: 100px;
+    height: 50px;
+    border: 1px solid green;
+    background-color: #fff;
+    font: bold 20px/20px times;
+    color: green;
+}
+
+.buttonAdd:hover {
+    color: yellowgreen;
+}
+.buttonAdd:active {
+    color: white
+}
+.addWindow{
+ 
+    position: sticky;
+    display: flex;
+    background-color: #fff;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 350px;
+    left: 35%;
+    width: 30%;
+    height: 350px;
+    border: 5px solid green;
+    box-shadow: 0px 0px 150px 20px green;
+}
+
+.addCollectionName {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.addCollectionName input {
+    outline: none;
+    width: 200px;
+    height: 35px;
+    font: 25px/30px times;
+    text-align: center;
+    border: 1px solid green;
+}
+
+.addCollectionName button{
+    position: absolute;
+    bottom: 25px;
+    width: 100px;
+    height: 50px;
+    border: 1px solid green;
+    background-color: #fff;
+    font: bold 20px/20px times;
+    color: green;
+}
+
+.addCollectionName button:hover{
+    color: yellowgreen;
+}
+
+.addCollectionName button:active{
+    color: white
+}
+
+.addCollectionTheme{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.addCollectionTheme div {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.addCollectionTheme p {
+    font: 30px/30px times;
+}
+
+.addCollectionTheme div button {
+    display: block;
+    width: 50px;
+    height: 50px;
+    border: 1px solid green;
+}
+
+.addCollectionThemeButton{
+    position: absolute;
+    bottom: 25px;
+    width: 100px;
+    height: 50px;
+    border: 1px solid green;
+    background-color: #fff;
+    font: bold 20px/20px times;
+    color: green;
+}
+
+.addCollectionThemeButton:hover{
+    color: yellowgreen;
+}
+
+.addCollectionThemeButton:active{
+    color: white
+}
+
+/*Add Button + windows END*/
+
+/*Edit collection window start*/
+
+.editWindow{
+    position: sticky;
+    background-color: #fff;
+    top: 250px;
+    left: 27.5%;
+    width: 45%;
+    height: 600px;
+    border: 5px solid green;
+    box-shadow: 0px 0px 150px 20px green;
+    overflow-y: scroll;
+}
+
+.editWindowbuttonsContainer{
+    position: sticky;
+    top:0px;
+    z-index: 5;
+    background-color: #69de33;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+    padding: 15px 0px;
+}
+
+    .editButtonsInContainer{
+        height: 50px;
+        border: 1px solid green;
+        background-color: #fff;
+        font: bold 20px/20px times;
+        color: green;
+        padding: 0px 20px;
+    }
+
+        .editButtonsInContainer:hover {
+            color: yellowgreen;
+        }
+
+    .addWordActiveButton{
+        height: 50px;
+        border: 1px solid green;
+        background-color: #fff;
+        font: bold 20px/20px times;
+        color: yellowgreen;
+        padding: 0px 20px;
+    }
+.addWordsMainBlock{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 500px;
+}
+    .addWordsForm {
+        padding-top: 25px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .addWordsForm label {
+        font: bold 21px/2px times;
+        color: green;
+    }
+
+    .addWordsForm input {
+        outline: none;
+        height: 30px;
+        border: 2px solid green;
+        font: 20px/20px times;
+        padding: 0 0 0 5px;
+    }
+
+    .addWordsForm input:focus {
+        border: 2px solid yellowgreen;
+    }
+
+    .addWordsForm div:first-child input  {
+        width: 100px;
+    }
+
+    .addWordsForm select {
+        height: 30px;
+        width: 160px;
+        outline: none;
+        border: 2px solid green;
+        font: 20px/20px times;
+    }
+
+    .addWordsForm select:focus {
+        border: 2px solid yellowgreen;
+    }
+
+    .addWordsForm button {
+        width: 100px;
+        border: 2px solid green;
+        background-color: #fff;
+        font: bold 20px/20px times;
+        color: green;
+    }
+
+    .addWordsForm button:hover {
+        border: 2px solid yellowgreen;
+        color: yellowgreen;
+    }
+    .addWordsForm button:active {
+        border: 2px solid yellowgreen;
+        color: white;
+    }
+
+    .addWordsPreView p{
+        padding: 20px 0 0 50px;
+        width: 100%;
+        font: 25px/20px times;
+        color: green;
+    }
+
+    .addWordsPreView div{
+        padding: 25px 0px 25px 25px;
+        font: 20px/22px times;
+        display: flex;
+        gap: 25px;  
+    }
+
+        
+
+        .addWordsPreView div ol{
+            padding: 0 0 0 20px;
+        }
+        
+        .addWordsPreView div ol li span:hover{
+            color: red;
+            cursor: not-allowed;
+        }
+
+
+
+ 
+
+    .addWordsSendButton{
+        position: sticky;
+        bottom: 20px;
+        margin: 0 auto;
+        padding: 0 20px 0 20px;
+        height: 50px;
+        border: 2px solid green;
+        background-color: #fff;
+        font: bold 20px/20px times;
+        color: green;
+    }
+
+    .addWordsSendButton:hover {
+        color: yellowgreen;
+    }
+
+    .addWordsSendButton:active {
+        color: white;
+    }
+
+    .viewWordsMain {
+        display: flex;
+        padding: 25px 0 25px 50px;
+        gap: 25px;
+        flex-direction: row;
+    }
+
+    .generalCloseButton{
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        border: 1px solid green;
+        border-radius: 50%;
+        background-color: #fff;
+        top: 10px;
+        right: 10px;
+    }
+
+
+    .generalCloseButton span:nth-child(1) {
+        position: absolute;
+        top: 11px;
+        right: 4px;
+        width: 15px;
+        height: 1px;
+        border: 1px solid green;
+        transform: rotate(45deg)
+    }
+
+    .generalCloseButton span:nth-child(2) {
+        position: absolute;
+        top: 11px;
+        right: 4px;
+        width: 15px;
+        height: 1px;
+        border: 1px solid green;
+        transform: rotate(-45deg)
+    }
+
+    .generalCloseButton:hover span {
+        border: 1px solid red;
+    }
+
+    .generalCloseButton:active span {
+        display: none;
+    }
+
+
+
+    .viewWordsMain {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+    
+
+    .viewWordsMain hr {
+        
+        margin: 25px 0 25px 0;
+    }
+
+    
+    .viewWordsMain  li{
+        font: 20px/20px times;
+        margin: 0 0 5px 0;
+    }
+
+    .viewWordsMain  span:first-child{
+        color: green;
+    }
+
+    .viewWordsMain  span:nth-child(3){
+        font: italic 20px/15px times;
+        color: grey;
+    }
+
+    .editCollectionList{
+        padding: 0 50px 0 25px;
+        width: 100%;
+    }
+
+    .editCollectionList li{
+        display: flex;
+        align-items: flex-end;
+   
+    }
+
+    .editCollectionList li span:first-child:hover{
+        color: red;
+        cursor: not-allowed;
+    }
+
+    .editCollectionList li input:first-of-type{
+        width: 30%;
+        border: 1px solid green;
+        outline: none;
+        font: 18px/20px times;
+        text-align: center;
+        height: 26px;
+        margin: 0 15px 00;
+    }
+
+    .editCollectionList li input:last-of-type{
+        width: 60%;
+        border: 1px solid green;
+        outline: none;
+        font: 19px/20px times;
+        text-align: center;
+        height: 26px;
+        margin: 0 15px 00;
+    }
+
+    .editCollectionList li select{
+        margin: 1px 0 0 0;
+        height: 26px;
+        width:15%;
+        font: 19px/20px times;
+        border: 1px solid green;
+    }
+  
+    .viewWordsMain div{
+        display: flex;
+        padding: 25px 0px 25px 50px;
+    }
+    .viewWordsMain div form ol li img{
+        cursor: pointer;
+    }
+
+    .viewWordsMainButtonSave{
+        position: sticky;
+        bottom: 20px;
+        margin: 0 auto;
+        padding: 0 20px 0 20px;
+        height: 50px;
+        border: 2px solid green;
+        background-color: #fff;
+        font: bold 20px/20px times;
+        color: green;
+    }
+
+    .viewWordsMainButtonSave:hover{
+        color:yellowgreen;
+        border: 2px solid yellowgreen;
+    }
+
+    .viewWordsMainButtonSave:active{
+        color:#fff;    
+    }
+
+    .viewCollectionMainWindow{
+        position: sticky;
+        background-color: #fff;
+        top: 250px;
+        left: 27.5%;
+        width: 45%;
+        height: 600px;
+        border: 5px solid green;
+        box-shadow: 0px 0px 150px 20px green;
+        overflow-y: auto;
+        
+    }
+
+    .viewCollectionMainWindow ol {
+        width: 70%;
+        margin: 50px auto;
+    }
+    
+    .viewCollectionMainWindow ol li {
+        margin: 0 0 5px 0;
+    }
+
+    .viewCollectionMainWindow ol li span:nth-child(1) {
+        margin: 0 0 0 10px;
+        font: bold 20px/25px times;
+    }
+    
+    .viewCollectionMainWindow ol li span:nth-child(2) {
+        font: 20px/20px times;
+        margin: 0 15px 0 0;
+    }
+
+    .viewCollectionMainWindow ol li span:nth-child(3) {
+        font: italic  20px/20px times;
+        color: grey;
+        
+    }
+
+  
+
+    .viewCollectionMainWindowCloseButton{
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        width: 25px;
+        height: 25px;
+        border: 1px solid green;
+        border-radius: 50%;
+        background-color: #fff;   
+    }
+
+    .viewCollectionMainWindowCloseButton span:nth-child(1) {
+        position: absolute;
+        top: 11px;
+        right: 4px;
+        width: 15px;
+        height: 1px;
+        border: 1px solid green;
+        transform: rotate(45deg)
+    }
+
+    .viewCollectionMainWindowCloseButton span:nth-child(2) {
+        position: absolute;
+        top: 11px;
+        right: 4px;
+        width: 15px;
+        height: 1px;
+        border: 1px solid green;
+        transform: rotate(-45deg)
+    }
+
+    .viewCollectionMainWindowCloseButton:hover span {
+        border: 1px solid red;
+    }
+
+    .viewCollectionMainWindowCloseButton:active span {
+        display: none;
+    }
+
+    
