@@ -102,7 +102,7 @@ export default function Training(){
         }
 
 
-        axios.post('https://foodshop-back.onrender.com/addCollection', dataForSending)
+        axios.post('https://voctests-back.onrender.com/addCollection', dataForSending)
         .then(d => console.log(d))
         .catch(e => console.log(e))
     }
@@ -140,7 +140,7 @@ export default function Training(){
         localStorage.setItem('VoC', JSON.stringify(user));
 
 
-        axios.patch('https://foodshop-back.onrender.com/changeCollection', dataForSending)
+        axios.patch('https://voctests-back.onrender.com/changeCollection', dataForSending)
         .then(d => console.log(d))
         .catch(e => console.log(e))
 
