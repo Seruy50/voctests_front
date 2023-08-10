@@ -23,18 +23,18 @@
     border: 2px solid green;
     width: 150px;
     height: 150px;
-    background-image: url('E://WEB/vocfull/voc_front/src/components/images/folder.png');
+    background-image: url("https://live.staticflickr.com/65535/53106869233_ef2aeda8ea_o.png");
     background-size: 70%;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .chooseFileContainer:hover{
-    background-image: url('E://WEB/vocfull/voc_front/src/components/images/folderFocus.png');
+    background-image: url('https://live.staticflickr.com/65535/53105791402_ddfbaa0633_o.png');
 }
 
 .chooseFileContainer:active{
-    background-image: url('E://WEB/vocfull/voc_front/src/components/images/folderActive.png');
+    background-image: url('https://live.staticflickr.com/65535/53106869238_bbfb8a0f91_o.png');
 }
 
 .chooseFile{

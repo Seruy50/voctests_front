@@ -397,7 +397,7 @@
  }
 
  .formCreateCollection button:first-of-type{
-    background: url('../images/accept.png');
+    background: url('https://live.staticflickr.com/65535/53105791422_fe1ed51c63_o.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -412,7 +412,7 @@
  .formCreateCollection button:last-of-type{
     width: 35px;
     height: 35px;
-    background: url('../images/close.png');
+    background: url('https://live.staticflickr.com/65535/53105791407_1d67174b08_o.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
