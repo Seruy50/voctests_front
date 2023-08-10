@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { v4 as uuidv4 } from 'uuid';
+
 import styles from './styles/Training.module.css';
 import axios from 'axios';
 import image from '../components/images/delete.png';
@@ -32,7 +32,7 @@ export default function Training(){
 
    
     let wordsWithMistakesList = wordsWithMistakes.map(word => {
-        return <li key={word.id}><span>{word.eng}</span><hr /><span>{word.ukr}</span> <img src={image} alt="" onClick={() => deleteWord(word.id)}/></li>
+        return <li key={word.id}><span>{word.eng}</span><hr /><span>{word.ukr}</span> <img src={'https://live.staticflickr.com/65535/53106361476_8a858d073e_o.png'} alt="" onClick={() => deleteWord(word.id)}/></li>
     })
 
     const deleteWord = (id) => {
