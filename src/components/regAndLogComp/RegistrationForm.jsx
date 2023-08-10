@@ -35,7 +35,7 @@ export default function RegistrationForm(props){
       } else if (nextForm === "Registration") {
         let loginData = { login: data.login, password: data.password };
         axios
-          .post("https://foodshop-back.onrender.com/login", loginData)
+          .post("https://voctests-back.onrender.com/", loginData)
           .then((data) => {
             if (data.data === "Wrong") {
               setInfoWindow(data.data);
