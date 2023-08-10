@@ -31,7 +31,7 @@ function App() {
 
   return <div>
 
-      {window.location.href === 'http://localhost:3000/' ? null : <Header />}
+      {window.location.href === 'https://voctests.onrender.com/' ? null : <Header />}
         <Routes>
             <Route path="/" element={<Registration />}/> 
             <Route path="/userPage/collections" element={<Collections />} />
