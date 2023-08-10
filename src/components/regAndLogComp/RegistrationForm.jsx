@@ -24,7 +24,7 @@ export default function RegistrationForm(props){
     onSubmit={handleSubmit((data) => {
       if (nextForm === "Log in") {
         axios
-          .post("https://foodshop-back.onrender.com/registration", data)
+          .post("https://voctests-back.onrender.com/registration", data)
           .then((data) => {
             setEmailConfirmation({
               user: data.data.user,
@@ -35,7 +35,7 @@ export default function RegistrationForm(props){
       } else if (nextForm === "Registration") {
         let loginData = { login: data.login, password: data.password };
         axios
-          .post("https://voctests-back.onrender.com/", loginData)
+          .post("https://voctests-back.onrender.com/login", loginData)
           .then((data) => {
             if (data.data === "Wrong") {
               setInfoWindow(data.data);
