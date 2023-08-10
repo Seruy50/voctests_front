@@ -37,7 +37,7 @@ export default function InformationWindow(props){
                 e.preventDefault();
                 axios
                   .post(
-                    "http://localhost:3001/registration/confirm",
+                    "https://foodshop-back.onrender.com/registration/confirm",
                     emailConfirmation
                   )
                   .then(() => {

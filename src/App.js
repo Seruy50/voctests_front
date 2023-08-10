@@ -18,7 +18,7 @@ function App() {
     if(localStorage.getItem('VoC')){
     
       let token = JSON.parse(localStorage.getItem('VoC')).token;
-      axios.post('http://localhost:3001/tokenCheck', {token: token}).then(data => {
+      axios.post('https://foodshop-back.onrender.com/tokenCheck', {token: token}).then(data => {
       if(data.data === "no"){
           navigate("/")
         } else {

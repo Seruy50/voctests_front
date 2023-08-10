@@ -10,16 +10,16 @@ export default function Header(){
 
     useEffect(() => {
         switch(window.location.href){
-            case 'http://localhost:3000/userPage/collections':
+            case 'https://voctests.onrender.com/userPage/collections':
                 setActiveButton("1");
                 break;
-            case 'http://localhost:3000/userPage/vocabluary':
+            case 'https://voctests.onrender.com/userPage/vocabluary':
                 setActiveButton("2");
                 break;
-            case 'http://localhost:3000/userPage/training':
+            case 'https://voctests.onrender.com/userPage/training':
                 setActiveButton("3");
                 break;
-            case 'http://localhost:3000/userPage/getwords':
+            case 'https://voctests.onrender.com/userPage/getwords':
                 setActiveButton("4");
                 break;
             default:

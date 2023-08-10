@@ -14,7 +14,7 @@ export default function AddCollection({setCollections, addCollection, setAddColl
             theme: addCollection.theme,
             _id: user._id,
         }
-        await axios.post('http://localhost:3001/addCollection', data).then((data) => {
+        await axios.post('https://foodshop-back.onrender.com/addCollection', data).then((data) => {
             let local = JSON.parse(localStorage.getItem("VoC"));
             console.log(data.data)
             local.collections = data.data;      

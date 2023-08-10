@@ -212,7 +212,7 @@ export default function TrainingWithWords(props){
                         <p className={styles.counter}>{counter[0] + 1} / {props.wordsForTrainingFirstPart.length}</p>
                     </div>
                     {blockWithButton()}
-                    <a href="http://localhost:3000/userPage/training" className={styles.buttonCloseTrainingField}><span></span><span></span></a>
+                    <a href="https://voctests.onrender.com/userPage/training" className={styles.buttonCloseTrainingField}><span></span><span></span></a>
                 </>
             case 'second':
                 return <>
@@ -224,7 +224,7 @@ export default function TrainingWithWords(props){
                         <p className={styles.counter}>{counter[0] + 1} / {props.wordsForTrainingFirstPart.length}</p>
                     </div>
                     {blockWithButton()}
-                    <a href="http://localhost:3000/userPage/training" className={styles.buttonCloseTrainingField}><span></span><span></span></a>
+                    <a href="https://voctests.onrender.com/userPage/training" className={styles.buttonCloseTrainingField}><span></span><span></span></a>
                </>
             case 'third':
                 return <>
@@ -235,7 +235,7 @@ export default function TrainingWithWords(props){
                         <p className={styles.counter}>{counter[0] + 1} / {props.wordsForTrainingThirdPart.length}</p>  
                     </div>
                     {blockWithButton()}
-                    <a href="http://localhost:3000/userPage/training" className={styles.buttonCloseTrainingField}><span></span><span></span></a>
+                    <a href="https://voctests.onrender.com/userPage/training" className={styles.buttonCloseTrainingField}><span></span><span></span></a>
                 </>
             case 'final':
                 return <div className={styles.finalBlockWithResults}>
@@ -248,7 +248,7 @@ export default function TrainingWithWords(props){
                                 {createResultsBlock('Stage III', 'third')}
                             </div>
                             <p className={styles.finalResultpar}>You made it in <span className={styles.finalResultColors}>{Math.floor(statistics.all.time / 60)} minutes</span> and <span className={styles.finalResultColors}>{Math.floor(statistics.all.time % 60)} seconds</span> with <span className={styles.finalResultColors}>{statistics.all.mistakes} mistakes</span>!</p>
-                            <a href="http://localhost:3000/userPage/training" className={styles.buttonCloseTrainingField}><span></span><span></span></a>
+                            <a href="https://voctests.onrender.com//userPage/training" className={styles.buttonCloseTrainingField}><span></span><span></span></a>
                 </div>
             default: 
                 return null;

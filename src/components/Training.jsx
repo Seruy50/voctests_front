@@ -57,7 +57,7 @@ export default function Training(){
             </ol>
             <button onClick={() => {checkToGoOnMistakesStage()}} >Check</button>
         </div>  
-        <a href="http://localhost:3000/userPage/training" className={styles.buttonCloseTrainingField}><span></span><span></span></a>
+        <a href="https://voctests.onrender.com/userPage/training" className={styles.buttonCloseTrainingField}><span></span><span></span></a>
     </>
 
     function checkToGoOnMistakesStage(){
@@ -102,7 +102,7 @@ export default function Training(){
         }
 
 
-        axios.post('http://localhost:3001/addCollection', dataForSending)
+        axios.post('https://foodshop-back.onrender.com/addCollection', dataForSending)
         .then(d => console.log(d))
         .catch(e => console.log(e))
     }
@@ -140,7 +140,7 @@ export default function Training(){
         localStorage.setItem('VoC', JSON.stringify(user));
 
 
-        axios.patch('http://localhost:3001/changeCollection', dataForSending)
+        axios.patch('https://foodshop-back.onrender.com/changeCollection', dataForSending)
         .then(d => console.log(d))
         .catch(e => console.log(e))
 
@@ -244,7 +244,7 @@ export default function Training(){
             </ol>
         {bottomPannel}
         <button className={styles.mistakesListContainer__startTraining} onClick={() => setStage('training')}>Start training!</button>
-        <a href="http://localhost:3000/userPage/training" className={styles.buttonCloseTrainingField}><span></span><span></span></a>
+        <a href="https://voctests.onrender.com/userPage/training" className={styles.buttonCloseTrainingField}><span></span><span></span></a>
     </div>
     
     

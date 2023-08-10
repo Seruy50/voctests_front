@@ -120,7 +120,7 @@ export default function Vocabluary(){
 
             console.log(data)
 
-            await axios.post('http://localhost:3001/uploadImage', data, {
+            await axios.post('https://foodshop-back.onrender.com/uploadImage', data, {
                 headers: {
                     'content-type': "multipart/form-data"
                 }
@@ -133,7 +133,7 @@ export default function Vocabluary(){
     
 
       async function downloadFile2(file){
-            let response = await fetch('http://localhost:3001/download')
+            let response = await fetch('https://foodshop-back.onrender.com/download')
             const slo = await response.blob();
             console.log(slo);
             const URsL = window.URL.createObjectURL(slo);
