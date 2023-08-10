@@ -54,7 +54,7 @@ export default function EditCollectionWindow({ editCollection, setEditCollection
         }
         
         
-        axios.patch('https://foodshop-back.onrender.com/changeCollection', data);
+        axios.patch('https://voctests-back.onrender.com/changeCollection', data);
 
         localStorage.setItem('VoC', JSON.stringify(user))
     }

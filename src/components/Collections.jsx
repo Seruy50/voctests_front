@@ -15,7 +15,7 @@ export default function Collections(){
 
     useEffect(() => {
         let user = JSON.parse(localStorage.getItem("VoC")).user;
-        axios.post('https://foodshop-back.onrender.com/getCollections', {_id: user._id}).then(data => {
+        axios.post('https://voctests-back.onrender.com/getCollections', {_id: user._id}).then(data => {
         let local = JSON.parse(localStorage.getItem("VoC"));
         
         local.collections = data.data.collections;      
@@ -28,7 +28,7 @@ export default function Collections(){
        
         if ( window.confirm('Are you shure?')){
             let user = JSON.parse(localStorage.getItem("VoC")).user;
-            axios.post('https://foodshop-back.onrender.com/deleteCard', {id: e.target.id, user: user._id}).then((data) => {
+            axios.post('https://voctests-back.onrender.com/deleteCard', {id: e.target.id, user: user._id}).then((data) => {
             let local = JSON.parse(localStorage.getItem("VoC"));
             local.collections = data.data;      
             localStorage.setItem("VoC", JSON.stringify(local))

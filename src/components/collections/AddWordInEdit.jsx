@@ -79,7 +79,7 @@ export default function AddWord({ editCollection, user, setUser, collection, set
             command: 'add'
         }
 
-        axios.patch('https://foodshop-back.onrender.com/changeCollection', data)
+        axios.patch('https://voctests-back.onrender.com/changeCollection', data)
         .then()
         .catch(err => console.log(err))
 

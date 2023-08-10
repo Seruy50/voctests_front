@@ -105,7 +105,7 @@ export default function GetWords(){
 
             console.log(user.user._id)
 
-            axios.post('https://foodshop-back.onrender.com/addCollection', dataForServer)
+            axios.post('https://voctests-back.onrender.com/addCollection', dataForServer)
             .then(d => console.log(d))
             .catch(e => console.log(e))
 
@@ -141,7 +141,7 @@ export default function GetWords(){
 
             data.append('text', txt);
 
-            await axios.post('https://foodshop-back.onrender.com/uploadText', data, {
+            await axios.post('https://voctests-back.onrender.com/uploadText', data, {
                 headers: {
                     'content-type': "multipart/form-data"
                 }
@@ -172,7 +172,7 @@ export default function GetWords(){
     }
 
     async function downloadFile(){
-        axios.post('https://foodshop-back.onrender.com/download')
+        axios.post('https://voctests-back.onrender.com/download')
         .then(data => {
             const slo = new Blob([data.data], {type: 'text/plain'});
             
@@ -209,7 +209,7 @@ export default function GetWords(){
             let collection = {...newCollection};
             delete collection.show;
             console.log(collection)
-            axios.post('https://foodshop-back.onrender.com/addCollection', collection)
+            axios.post('https://voctests-back.onrender.com/addCollection', collection)
             .then(d => console.log(d))
             .catch(e => console.log(e))
         }
