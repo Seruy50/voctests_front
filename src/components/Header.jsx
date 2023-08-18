@@ -10,7 +10,6 @@ export default function Header({server, site}){
     let user = JSON.parse(localStorage.getItem('VoC')).user;
     const navigate = useNavigate();
    
-
     useEffect(() => {
         switch(window.location.href){
             case site + 'userPage/collections':
