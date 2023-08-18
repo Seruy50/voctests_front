@@ -12,7 +12,7 @@ import Training from './components/Training.jsx'
 
 function App() {
   const navigate = useNavigate();
-  const [server, setServer] = useState('https://voctests-back.onrender.com');
+  const [server, setServer] = useState('https://voctests-back.onrender.com/');
   const [site, setSite] = useState('https://voctests.onrender.com/');
   
 
