@@ -1,12 +1,10 @@
 import React, {useState} from 'react';
 import styles from './styles/Vocabluary.module.css';
-import axios from 'axios'
+
 
 export default function Vocabluary(){
     const [selectedCollections, setSelectedCollections] = useState([]);
     const [sortMethod, setSortMethod] = useState('Alphabet(A-Z)')
-
-    const [img, setImg] = useState();
     
 
     let collections = JSON.parse(localStorage.getItem('VoC')).collections;
@@ -110,44 +108,6 @@ export default function Vocabluary(){
         setSelectedCollections([...selected]);
     }
 
-   
-   
-
-    const sendFile = async () => {
-        try{
-            const data = new FormData()
-            data.append('avatar', img)
-
-            console.log(data)
-
-            await axios.post('https://voctests-back.onrender.com/uploadImage', data, {
-                headers: {
-                    'content-type': "multipart/form-data"
-                }
-            }).then(d => console.log(d))
-        } catch (error) {
-            
-        }
-    }
-
-    
-
-      async function downloadFile2(file){
-            let response = await fetch('https://voctests-back.onrender.com/download')
-            const slo = await response.blob();
-            console.log(slo);
-            const URsL = window.URL.createObjectURL(slo);
-            const link = document.createElement('a');
-            link.href = URsL;
-            link.download = 25;
-            document.body.appendChild(link);
-            link.click();
-            link.remove();
-                
-    }
-
-    
-
     return <div className={styles.vocabluaryMainBlock}>
         <div className={styles.vocabluarySetings}>
             <form name="collections" className={styles.vocabluarySetingsCollections}>
@@ -172,13 +132,6 @@ export default function Vocabluary(){
                     <option value="Part of language">Part of language</option>
                 </select>
             </form>
-
-
-            <input type="file" onChange={e => setImg(e.target.files[0])}/>
-            <button onClick={() => sendFile()}>Send</button>
-
-           
-
         </div>
         <div className={styles.vocabluaryWordlsListContainer}>
             <ol >

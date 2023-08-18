@@ -3,7 +3,7 @@ import stylesCollections from '../styles/Collections.module.css';
 import axios from 'axios';
 
 
-export default function AddWord({ editCollection, user, setUser, collection, setCollection }){
+export default function AddWord({ editCollection, user, setUser, collection, setCollection, server }){
     const [newWords, setNewWords] = useState([]);
     const [previewWordId, setPreviewWordId] = useState(1);
 
@@ -79,7 +79,7 @@ export default function AddWord({ editCollection, user, setUser, collection, set
             command: 'add'
         }
 
-        axios.patch('https://voctests-back.onrender.com/changeCollection', data)
+        axios.patch(server + 'changeCollection', data)
         .then()
         .catch(err => console.log(err))
 

@@ -7,7 +7,7 @@ import ViewCollectionWindow from './collections/ViewCollection.jsx';
 
 
 
-export default function Collections(){
+export default function Collections({server, site}){
     const [addCollection, setAddCollection] = useState({show: false, phase: '1' , name: '', theme: ''});
     const [editCollection, setEditCollection] = useState({show: false, collectionId: ''});
     const [viewCollection, setViewCollection] = useState({show: false, collectionId: ''});
@@ -15,7 +15,7 @@ export default function Collections(){
 
     useEffect(() => {
         let user = JSON.parse(localStorage.getItem("VoC")).user;
-        axios.post('https://voctests-back.onrender.com/getCollections', {_id: user._id}).then(data => {
+        axios.post(server + 'getCollections', {_id: user._id}).then(data => {
         let local = JSON.parse(localStorage.getItem("VoC"));
         
         local.collections = data.data.collections;      
@@ -28,7 +28,7 @@ export default function Collections(){
        
         if ( window.confirm('Are you shure?')){
             let user = JSON.parse(localStorage.getItem("VoC")).user;
-            axios.post('https://voctests-back.onrender.com/deleteCard', {id: e.target.id, user: user._id}).then((data) => {
+            axios.post(server + 'deleteCard', {id: e.target.id, user: user._id}).then((data) => {
             let local = JSON.parse(localStorage.getItem("VoC"));
             local.collections = data.data;      
             localStorage.setItem("VoC", JSON.stringify(local))
@@ -46,7 +46,7 @@ export default function Collections(){
                 addCollection.show 
                 ? 
                 <div className={stylesCollections.addWindowContainer}>
-                    <AddCollection setCollections={setCollections} addCollection={addCollection} setAddCollection={setAddCollection}/> 
+                    <AddCollection setCollections={setCollections} addCollection={addCollection} setAddCollection={setAddCollection} server={server} site={site}/> 
                 </div>:
                 null
             }
@@ -71,14 +71,14 @@ export default function Collections(){
             {editCollection.show 
                 ? 
                 <div className={stylesCollections.addWindowContainer}>
-                    <EditCollectionWindow editCollection={editCollection} setEditCollection={setEditCollection}/> 
+                    <EditCollectionWindow editCollection={editCollection} setEditCollection={setEditCollection} server={server} site={site}/> 
                 </div>
                 : 
                 null}
             {viewCollection.show 
                 ? 
                 <div className={stylesCollections.addWindowContainer} >
-                    <ViewCollectionWindow viewCollection={viewCollection} setViewCollection={setViewCollection}/> 
+                    <ViewCollectionWindow viewCollection={viewCollection} setViewCollection={setViewCollection} /> 
                 </div>
                 : 
                 null}

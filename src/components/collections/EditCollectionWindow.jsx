@@ -7,7 +7,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 
 
-export default function EditCollectionWindow({ editCollection, setEditCollection }){
+export default function EditCollectionWindow({ editCollection, setEditCollection, server, site }){
     const [section, setSection] = useState('Show collection');
     const [user, setUser] = useState(JSON.parse(localStorage.getItem('VoC')))
 
@@ -54,7 +54,7 @@ export default function EditCollectionWindow({ editCollection, setEditCollection
         }
         
         
-        axios.patch('https://voctests-back.onrender.com/changeCollection', data);
+        axios.patch(server + 'changeCollection', data);
 
         localStorage.setItem('VoC', JSON.stringify(user))
     }
@@ -146,7 +146,7 @@ export default function EditCollectionWindow({ editCollection, setEditCollection
             <div onClick={() => setEditCollection({...editCollection, show: false})} className={stylesCollections.generalCloseButton}><span></span><span></span></div>
         </div>
         <div>
-            {section === 'Show collection' ? showWords() : <AddWord editCollection={editCollection} user={user} setUser={setUser} collection={collection} setCollection={setCollection}/>}
+            {section === 'Show collection' ? showWords() : <AddWord editCollection={editCollection} user={user} setUser={setUser} collection={collection} setCollection={setCollection} server={server} site={site}/>}
         </div>
     </div>
 }

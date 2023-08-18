@@ -1,8 +1,9 @@
 .main{
+    position: relative;
+    z-index: 10;
     display: flex;
     flex-direction: row;
-    position: sticky;
-    z-index: 3;
+    justify-content: space-between;
     top: 0px;
     border: 1px solid green;
     background-color: green;
@@ -51,17 +52,37 @@
 .profile{
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    gap: 50px;
-    padding-right: 100px;
-    width: 50%;
+    margin: 0 50px 0 0;
+    padding-left: 5%;
+    width: 25%;
     height: 100%;
+   
+}
+
+.iconHolder {
+    width: 40%;
+    display: flex;
+    justify-content: center;
 }
 .icon{
     background-color: #fff;
     width: 80px;
     height: 80px;
     border-radius: 50%;
+    border: 5px solid yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.icon:hover{
+    width: 85px;
+    height: 85px;
+}
+
+.icon img{
+    width: 100%;
 }
 
 .userName{
@@ -69,10 +90,51 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    width: 300px;
+    width: 60%;
     height: 80px;
     color: white;
     font: italic 25px/30px times;
+}
 
+.mainBlockProfileContainerDown{
+    position: absolute;
+    width: 700px;
+    height: 800px;
+    background-color: green;
+    top: -800px;
+    right:0;
+    animation-name: blockDown;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    z-index: 2;
+}
 
+@keyframes blockDown {
+    from {
+        top: -800px;
+    } to {
+        top: 125px;
+    }
+}
+
+.mainBlockProfileContainerUp{
+    position: absolute;
+    width: 700px;
+    height: 800px;
+    background-color: green;
+    top: 125px;
+    right:0;
+    animation-name: blockUp;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    z-index: 2;
+    
+}
+
+@keyframes blockUp {
+    from {
+        top: 125px;
+    } to {
+        top: -800px;
+    }
 }

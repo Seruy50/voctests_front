@@ -12,13 +12,16 @@ import Training from './components/Training.jsx'
 
 function App() {
   const navigate = useNavigate();
+  const [server, setServer] = useState('http://localhost:3001/');
+  const [site, setSite] = useState('http://localhost:3000/');
+  
 
 
   useEffect(() => {
     if(localStorage.getItem('VoC')){
     
       let token = JSON.parse(localStorage.getItem('VoC')).token;
-      axios.post('https://voctests-back.onrender.com/tokenCheck', {token: token}).then(data => {
+      axios.post(server + 'tokenCheck', {token: token}).then(data => {
       if(data.data === "no"){
           navigate("/")
         } else {
@@ -31,13 +34,13 @@ function App() {
 
   return <div>
 
-      {window.location.href === 'https://voctests.onrender.com/' ? null : <Header />}
+      {window.location.href === site ? null : <Header server={server} site={site}/>}
         <Routes>
-            <Route path="/" element={<Registration />}/> 
-            <Route path="/userPage/collections" element={<Collections />} />
+            <Route exact path="/" element={<Registration server={server} site={site}/>}/> 
+            <Route path="/userPage/collections" element={<Collections server={server} site={site}/>} />
             <Route path="/userPage/vocabluary" element={<Vocabluary />} />
-            <Route path="/userPage/training" element={<Training />} />
-            <Route path="/userPage/getwords" element={<GetWords />} />
+            <Route path="/userPage/training" element={<Training server={server} site={site}/>} />
+            <Route path="/userPage/getwords" element={<GetWords server={server} site={site}/>} />
         </Routes>
   </div>
     

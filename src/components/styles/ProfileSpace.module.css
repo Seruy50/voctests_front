@@ -1,0 +1,85 @@
+.mainBlock {
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+
+}
+
+.sideButtonsSpace {
+    width: 25%;
+    border: 1px solid red;
+    background-color: #fff;
+}   
+
+.workingField {
+    padding: 50px 0 0 0;
+    width: 75%;
+    height: 100%;
+    border-left: 5px solid green;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    font: 25px/25px times;
+}
+
+.workingField img {
+    width: 200px;
+    height: 200px;
+    border: 5px solid green;
+    margin: 0 0 50px 0;
+}
+
+.workingField p {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid green;
+    padding: 0 0 15px 0;
+}
+
+.workingField p span:nth-child(1) {
+    font-weight: bold;
+}
+
+.workingField p span:nth-child(2) {
+    font-style: italic;
+}
+
+.workingField button{
+    position: absolute;
+    bottom: 45px;
+    padding: 0 15px 0 15px;
+    height: 50px;
+    border: 1px solid green;
+    background-color: #fff;
+    font: bold 20px/20px times;
+    color: green;
+}
+
+.workingField button:hover{
+    color: yellowgreen;
+}
+
+.workingField button:active {
+    color:#fff
+}
+
+.workingField_personalDataForm{
+    
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    font: 25px/25px times;
+}

@@ -4,7 +4,7 @@ import axios from 'axios';
 
 
 
-export default function AddCollection({setCollections, addCollection, setAddCollection}){
+export default function AddCollection({setCollections, addCollection, setAddCollection, server, site}){
     
     let user = JSON.parse(localStorage.getItem('VoC')).user;
 
@@ -14,7 +14,7 @@ export default function AddCollection({setCollections, addCollection, setAddColl
             theme: addCollection.theme,
             _id: user._id,
         }
-        await axios.post('https://voctests-back.onrender.com/addCollection', data).then((data) => {
+        await axios.post(server + 'addCollection', data).then((data) => {
             let local = JSON.parse(localStorage.getItem("VoC"));
             console.log(data.data)
             local.collections = data.data;      

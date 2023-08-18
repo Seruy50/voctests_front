@@ -1,15 +1,15 @@
 import React, {useState} from 'react';
+import {useNavigate} from 'react-router-dom';
 
 import styles from './styles/Training.module.css';
 import axios from 'axios';
-import image from '../components/images/delete.png';
 import Settings from './training/Settings.jsx';
 import TrainingWithWords from './training/TrainingWithWords.jsx';
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-export default function Training(){
+export default function Training({server, site}){
     const [stage, setStage] = useState('setings');
     const [whatToDo, setWhatToDo] = useState();
     const [addCreateBlock, setAddCreateBlock] = useState();
@@ -20,6 +20,7 @@ export default function Training(){
     const [words, setWords] = useState([]);
     const [wordsWithMistakes, setWordsWithMistakes] = useState([]);
    
+    const navigate = useNavigate();
 
     
 
@@ -57,7 +58,7 @@ export default function Training(){
             </ol>
             <button onClick={() => {checkToGoOnMistakesStage()}} >Check</button>
         </div>  
-        <a href="https://voctests.onrender.com/userPage/training" className={styles.buttonCloseTrainingField}><span></span><span></span></a>
+        <div onClick={() => navigate('/userPage/training')} className={styles.buttonCloseTrainingField}><span></span><span></span></div>
     </>
 
     function checkToGoOnMistakesStage(){
@@ -102,7 +103,7 @@ export default function Training(){
         }
 
 
-        axios.post('https://voctests-back.onrender.com/addCollection', dataForSending)
+        axios.post(server + 'addCollection', dataForSending)
         .then(d => console.log(d))
         .catch(e => console.log(e))
     }
@@ -140,7 +141,7 @@ export default function Training(){
         localStorage.setItem('VoC', JSON.stringify(user));
 
 
-        axios.patch('https://voctests-back.onrender.com/changeCollection', dataForSending)
+        axios.patch(server + 'changeCollection', dataForSending)
         .then(d => console.log(d))
         .catch(e => console.log(e))
 
@@ -244,7 +245,7 @@ export default function Training(){
             </ol>
         {bottomPannel}
         <button className={styles.mistakesListContainer__startTraining} onClick={() => setStage('training')}>Start training!</button>
-        <a href="https://voctests.onrender.com/userPage/training" className={styles.buttonCloseTrainingField}><span></span><span></span></a>
+        <div onClick={() => navigate('/userPage/training')} className={styles.buttonCloseTrainingField}><span></span><span></span></div>
     </div>
     
     
@@ -275,6 +276,8 @@ export default function Training(){
                 wordsForTrainingFirstPart={wordsForTrainingFirstPart}
                 wordsForTrainingSecondPart={wordsForTrainingSecondPart}
                 wordsForTrainingThirdPart={wordsForTrainingThirdPart}
+                server={server} 
+                site={site}
                 />
             default: 
                 break;

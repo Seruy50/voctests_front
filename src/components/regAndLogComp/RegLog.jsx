@@ -5,7 +5,7 @@ import InformationWindow from "./InfoWindow.jsx";
 import RegistrationForm from "./RegistrationForm.jsx";
 import { useNavigate } from "react-router-dom";
 
-export default function RegLogForm({ logged }) {
+export default function RegLogForm({ logged, server, site }) {
   const [infoWindow, setInfoWindow] = useState();
   const [emailConfirmation, setEmailConfirmation] = useState();
   const navigate = useNavigate();
@@ -16,7 +16,9 @@ export default function RegLogForm({ logged }) {
       <InformationWindow infoWindow={infoWindow} 
                          setInfoWindow={setInfoWindow}
                          emailConfirmation={emailConfirmation}
-                         setEmailConfirmation={setEmailConfirmation}/>
+                         setEmailConfirmation={setEmailConfirmation}
+                         server={server}
+                         site={site}/>
       <div className={stylesRegLog.formBlock}>
         {
           logged 
@@ -25,6 +27,8 @@ export default function RegLogForm({ logged }) {
             :
           <RegistrationForm setInfoWindow={setInfoWindow}
                           setEmailConfirmation={setEmailConfirmation}
+                          server={server} 
+                          site={site}
                           />
         }
       </div>

@@ -2,10 +2,10 @@ import React, {useState} from 'react';
 import styles from './styles/getWords.module.css';
 import axios from 'axios';
 
-export default function GetWords(){
+export default function GetWords({server, site}){
     const [txt, setTxt] = useState('');
     const [downloadButton, setDownloadButton] = useState(true);
-    const [wordsFrom, setWordsFrom] = useState();
+ 
     let user = JSON.parse(localStorage.getItem('VoC'));
     const [newCollection, setNewCollection] = useState({name: '', theme: '', _id: user.user._id, words: [], show: false, doneButtonShow: true});
     const [text, setText] = useState(true);
@@ -105,7 +105,7 @@ export default function GetWords(){
 
             console.log(user.user._id)
 
-            axios.post('https://voctests-back.onrender.com/addCollection', dataForServer)
+            axios.post(server + 'addCollection', dataForServer)
             .then(d => console.log(d))
             .catch(e => console.log(e))
 
@@ -141,7 +141,7 @@ export default function GetWords(){
 
             data.append('text', txt);
 
-            await axios.post('https://voctests-back.onrender.com/uploadText', data, {
+            await axios.post(server + 'uploadText', data, {
                 headers: {
                     'content-type': "multipart/form-data"
                 }
@@ -172,7 +172,7 @@ export default function GetWords(){
     }
 
     async function downloadFile(){
-        axios.post('https://voctests-back.onrender.com/download')
+        axios.post(server + 'download')
         .then(data => {
             const slo = new Blob([data.data], {type: 'text/plain'});
             
@@ -209,7 +209,7 @@ export default function GetWords(){
             let collection = {...newCollection};
             delete collection.show;
             console.log(collection)
-            axios.post('https://voctests-back.onrender.com/addCollection', collection)
+            axios.post(server + 'addCollection', collection)
             .then(d => console.log(d))
             .catch(e => console.log(e))
         }

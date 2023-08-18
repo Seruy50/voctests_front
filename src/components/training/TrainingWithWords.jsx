@@ -1,5 +1,6 @@
 import react, {useState, useEffect} from 'react';
-import styles from '../styles/Training.module.css'
+import styles from '../styles/Training.module.css';
+import {useNavigate} from 'react-router-dom';
 
 
 export default function TrainingWithWords(props){
@@ -11,6 +12,7 @@ export default function TrainingWithWords(props){
     const [mistakes, setMistakes] = useState(0);
     const [statistics, setStatistics] = useState({first: {time: 0, mistakes: 0}, second: {time: 0, mistakes: 0}, third: {time: 0, mistakes: 0}, all: {time: 0, mistakes: 0}})
     const [start, setStart] = useState();
+    const navigate = useNavigate()
 
     useEffect(() => {
         setStart(new Date())
@@ -212,7 +214,7 @@ export default function TrainingWithWords(props){
                         <p className={styles.counter}>{counter[0] + 1} / {props.wordsForTrainingFirstPart.length}</p>
                     </div>
                     {blockWithButton()}
-                    <a href="https://voctests.onrender.com/userPage/training" className={styles.buttonCloseTrainingField}><span></span><span></span></a>
+                    <div onClick={() => navigate('/userPage/Training')} className={styles.buttonCloseTrainingField}><span></span><span></span></div>
                 </>
             case 'second':
                 return <>
@@ -224,7 +226,7 @@ export default function TrainingWithWords(props){
                         <p className={styles.counter}>{counter[0] + 1} / {props.wordsForTrainingFirstPart.length}</p>
                     </div>
                     {blockWithButton()}
-                    <a href="https://voctests.onrender.com/userPage/training" className={styles.buttonCloseTrainingField}><span></span><span></span></a>
+                    <div onClick={() => navigate('/userPage/Training')} className={styles.buttonCloseTrainingField}><span></span><span></span></div>
                </>
             case 'third':
                 return <>
@@ -235,7 +237,7 @@ export default function TrainingWithWords(props){
                         <p className={styles.counter}>{counter[0] + 1} / {props.wordsForTrainingThirdPart.length}</p>  
                     </div>
                     {blockWithButton()}
-                    <a href="https://voctests.onrender.com/userPage/training" className={styles.buttonCloseTrainingField}><span></span><span></span></a>
+                    <div onClick={() => navigate('/userPage/Training')} className={styles.buttonCloseTrainingField}><span></span><span></span></div>
                 </>
             case 'final':
                 return <div className={styles.finalBlockWithResults}>
@@ -248,7 +250,7 @@ export default function TrainingWithWords(props){
                                 {createResultsBlock('Stage III', 'third')}
                             </div>
                             <p className={styles.finalResultpar}>You made it in <span className={styles.finalResultColors}>{Math.floor(statistics.all.time / 60)} minutes</span> and <span className={styles.finalResultColors}>{Math.floor(statistics.all.time % 60)} seconds</span> with <span className={styles.finalResultColors}>{statistics.all.mistakes} mistakes</span>!</p>
-                            <a href="https://voctests.onrender.com//userPage/training" className={styles.buttonCloseTrainingField}><span></span><span></span></a>
+                            <div onClick={() => navigate('/userPage/Training')} className={styles.buttonCloseTrainingField}><span></span><span></span></div>
                 </div>
             default: 
                 return null;
